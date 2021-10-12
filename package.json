@@ -1,0 +1,35 @@
+{
+  "name": "atos-react-jsx",
+  "version": "1.0.0",
+  "description": "open source react components for creating Atos apps",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && yarn copy-files",
+    "publish": "npm publish",
+    "copy-files": "cp -r ./src/public ./lib/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kavindapelpola/atos-react-jsx.git"
+  },
+  "keywords": [
+    "Atos",
+    "UI",
+    "JSX",
+    "react"
+  ],
+  "author": "kavinda.pelpola@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "dependencies": {
+    "@types/styled-components": "^5.1.15",
+    "styled-components": "^5.3.1"
+  }
+}
