@@ -7,7 +7,7 @@ export const Menu = styled.div`
 
   height: 4rem;
   width: 100%;
-  padding-left: 0.75rem;
+  padding-left: 1.5rem;
 
   background: #2d3748;
   color: #fff;
