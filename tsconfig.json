@@ -6,9 +6,10 @@
     "outDir": "./lib",
     "strict": true,
     "jsx": "react-jsx",
-    "lib": ["dom", "dom.iterable", "esnext"]
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "esModuleInterop": true
   },
   "assets": [{ "include": "**/*.png" }],
   "include": ["src"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "exclude": ["node_modules", "**/__tests__/*", "**/*stories*"]
 }
