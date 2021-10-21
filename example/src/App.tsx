@@ -7,12 +7,17 @@ import {
   Row,
   DropDown,
   Button,
+  Input,
+  InputArea,
 } from "atos-react-jsx";
 import React from "react";
 
 function App() {
+  const [input, setInput] = React.useState<string>();
+  const [inputArea, setInputArea] = React.useState<string>();
   const [select, setSelect] = React.useState<string>();
   const [select2, setSelect2] = React.useState<string>();
+  const [select2Error, setSelect2Error] = React.useState<string>();
   return (
     <Main>
       <Title title="Example" user="user" prodUrl="http://prod" />
@@ -34,7 +39,7 @@ function App() {
           width={200}
           error={select === "OPT1" ? "dont choose opt1" : undefined}
         />
-        <Button>hello</Button>
+        <Button onClick={() => setSelect2Error("here")}>hello</Button>
       </Row>
       <Row>
         test2&nbsp;&nbsp;
@@ -45,7 +50,22 @@ function App() {
           options={["OPT1", "OPT2"]}
           setValue={setSelect2}
           width={100}
-          error="mandatory"
+          error={select2Error}
+        />
+        <Input
+          title="input-test"
+          name="input-test"
+          width={100}
+          value={input}
+          setValue={setInput}
+        />
+        <InputArea
+          title="input-test"
+          name="input-test"
+          width={300}
+          rows={4}
+          value={inputArea}
+          setValue={setInputArea}
         />
       </Row>
     </Main>

@@ -29,7 +29,7 @@ var DropDown = function (props) {
         },
         option: function (provided, _a) {
             var isSelected = _a.isSelected, isFocused = _a.isFocused;
-            return __assign(__assign({}, provided), { color: "#2d3748", backgroundColor: isSelected
+            return __assign(__assign({}, provided), { color: "#2d3748", fontSize: "14px", backgroundColor: isSelected
                     ? "#B8C4D8"
                     : isFocused
                         ? "#F2F7FF"

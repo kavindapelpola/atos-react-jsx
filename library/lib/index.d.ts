@@ -8,4 +8,6 @@ import { LabeledInput } from "./components/labeled-input";
 import { Row } from "./components/row";
 import { DropDown } from "./components/drop-down";
 import { Button, HighlightedButton } from "./components/button";
-export { Main, Title, Menu, Content, ErrorMessage, MenuItem, LabeledInput, Row, DropDown, Button, HighlightedButton, };
+import { Input } from "./components/input";
+import { InputArea } from "./components/input-area";
+export { Main, Title, Menu, Content, ErrorMessage, MenuItem, LabeledInput, Row, DropDown, Button, HighlightedButton, Input, InputArea, };
