@@ -1,41 +1,7 @@
 # Atos react jsx components
 
-Use this library to import react components into your Atos apps. This library sets up
-the layout, colour scheme, and design system required to build good compliant Atos
-apps. These apps are typically internal to Atos and branded with Atos branding.
-
-## Getting started
-
-All you need to do if you're using yarn is
-
-```
-yarn add atos-react-jsx
-```
-
-## Implementing in the app
-
-Include the components you want with
-
-```
-import { <component> } from "atos-react-jsx";
-```
-
-A full list of components are available in the storybook
-
-### Design system
-
-Wrap the whole app in Main. Then select the components you want
-
-```
-Main (app wrapper)
-|
-|-- Title (Atos branded title banner)
-|
-|-- Menu (menu system)
-|
-|-- Content (attach your main content body here)
-    |-- Row
-```
+Use this project to house the Atos jsx library and the example project to view / test it.
+Please see the README.md in the library folder to get more details about the library itself.
 
 ## Developing the atos-react-jsx library
 
