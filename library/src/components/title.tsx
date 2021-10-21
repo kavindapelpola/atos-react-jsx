@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 
 const TitleBar = styled.header`
   display: flex;
@@ -32,6 +33,7 @@ const HeaderLink = styled.div`
   align-items: center;
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 `;
 
 const H1 = styled.h1`
@@ -68,9 +70,15 @@ type Props = {
 const host = window.location.protocol + "//" + window.location.hostname;
 
 export const Title: React.FC<Props> = (props: Props) => {
+  const history = useHistory();
+
+  const handleClick = (path: string) => {
+    history.push(path);
+  };
+
   return (
     <TitleBar aria-label="top-bar">
-      <HeaderLink>
+      <HeaderLink onClick={() => handleClick("/")}>
         <AtosLogo src="/atos-logo.png" />
         {host === props.prodUrl ? (
           <H1>{props.title}</H1>
