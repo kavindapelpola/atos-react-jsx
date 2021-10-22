@@ -43,7 +43,11 @@ Include the components you want with import statement, for example
 import { <component> } from "atos-react-jsx";
 ```
 
-A full list of components are available in the storybook
+A full list of components are available in the storybook. You can start the storybook with
+
+```
+yarn storybook
+```
 
 ### Design system
 

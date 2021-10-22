@@ -6,6 +6,9 @@ node_modules
 .pnp.js
 /lib
 
+# storybook
+storybook-static
+
 # testing
 /coverage
 

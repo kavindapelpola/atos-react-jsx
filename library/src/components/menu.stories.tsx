@@ -1,6 +1,7 @@
 import { Meta } from "@storybook/react";
 import { Main } from "./main";
 import { Menu } from "./menu";
+import { MenuItem } from "./menu-item";
 
 export default {
   component: Menu,
@@ -9,6 +10,14 @@ export default {
 
 export const Primary: React.VFC<{}> = () => (
   <Main>
-    <Menu>Some menu item</Menu>
+    <Menu></Menu>
+  </Main>
+);
+
+export const WithItem: React.VFC<{}> = () => (
+  <Main>
+    <Menu>
+      <MenuItem title="Item1" path="path" />
+    </Menu>
   </Main>
 );

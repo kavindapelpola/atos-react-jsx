@@ -1,5 +1,6 @@
 import { Meta } from "@storybook/react";
 import { ErrorMessage } from "./error-message";
+import { Main } from "./main";
 
 export default {
   component: ErrorMessage,
@@ -7,5 +8,7 @@ export default {
 } as Meta;
 
 export const Primary: React.VFC<{}> = () => (
-  <ErrorMessage>Some error</ErrorMessage>
+  <Main>
+    <ErrorMessage>Some error</ErrorMessage>
+  </Main>
 );
