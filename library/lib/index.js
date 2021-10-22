@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.InputArea = exports.Input = exports.HighlightedButton = exports.Button = exports.DropDown = exports.Row = exports.LabeledInput = exports.MenuItem = exports.ErrorMessage = exports.Content = exports.Menu = exports.Title = exports.Main = void 0;
+exports.CheckBox = exports.InputArea = exports.Input = exports.HighlightedButton = exports.Button = exports.DropDown = exports.Row = exports.LabeledInput = exports.MenuItem = exports.ErrorMessage = exports.Content = exports.Menu = exports.Title = exports.Main = void 0;
 var main_1 = require("./components/main");
 Object.defineProperty(exports, "Main", { enumerable: true, get: function () { return main_1.Main; } });
 var title_1 = require("./components/title");
@@ -26,3 +26,5 @@ var input_1 = require("./components/input");
 Object.defineProperty(exports, "Input", { enumerable: true, get: function () { return input_1.Input; } });
 var input_area_1 = require("./components/input-area");
 Object.defineProperty(exports, "InputArea", { enumerable: true, get: function () { return input_area_1.InputArea; } });
+var check_box_1 = require("./components/check-box");
+Object.defineProperty(exports, "CheckBox", { enumerable: true, get: function () { return check_box_1.CheckBox; } });
