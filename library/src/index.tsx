@@ -10,6 +10,7 @@ import { DropDown } from "./components/drop-down";
 import { Button, HighlightedButton } from "./components/button";
 import { Input } from "./components/input";
 import { InputArea } from "./components/input-area";
+import { CheckBox } from "./components/check-box";
 
 export {
   Main,
@@ -25,4 +26,5 @@ export {
   HighlightedButton,
   Input,
   InputArea,
+  CheckBox,
 };

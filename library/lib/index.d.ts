@@ -10,4 +10,5 @@ import { DropDown } from "./components/drop-down";
 import { Button, HighlightedButton } from "./components/button";
 import { Input } from "./components/input";
 import { InputArea } from "./components/input-area";
-export { Main, Title, Menu, Content, ErrorMessage, MenuItem, LabeledInput, Row, DropDown, Button, HighlightedButton, Input, InputArea, };
+import { CheckBox } from "./components/check-box";
+export { Main, Title, Menu, Content, ErrorMessage, MenuItem, LabeledInput, Row, DropDown, Button, HighlightedButton, Input, InputArea, CheckBox, };
