@@ -22,7 +22,7 @@ var react_select_1 = __importDefault(require("react-select"));
 var DropDown = function (props) {
     var selectStyle = {
         control: function (provided) {
-            return __assign(__assign({}, provided), { fontFamily: "-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Roboto\",\"Oxygen\", \"Ubuntu\",\"Cantarell\",\"Fira Sans\",\"Droid Sans\",\"Helvetica Neue\", sans-serif;", color: "white", borderColor: "#2d3748", width: props.width, outline: "#2d3748" });
+            return __assign(__assign({}, provided), { fontFamily: "-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Roboto\",\"Oxygen\", \"Ubuntu\",\"Cantarell\",\"Fira Sans\",\"Droid Sans\",\"Helvetica Neue\", sans-serif;", color: "white", border: "1px solid transparent", borderRadius: "1px", outline: "none", boxShadow: "0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15)", width: props.width });
         },
         singleValue: function (provided) {
             return __assign(__assign({}, provided), { color: "#2d3748" });

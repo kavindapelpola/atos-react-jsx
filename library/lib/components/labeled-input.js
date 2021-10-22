@@ -9,5 +9,5 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LabeledInput = void 0;
 var styled_components_1 = __importDefault(require("styled-components"));
-exports.LabeledInput = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  margin-right: 1rem;\n"], ["\n  margin-right: 1rem;\n"])));
+exports.LabeledInput = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  margin-right: 10px;\n"], ["\n  margin-right: 10px;\n"])));
 var templateObject_1;
