@@ -9,7 +9,9 @@ export const Button = styled.button`
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin-right: 1rem;
+  margin-right: 10px;
+  margin-top: 18px;
+  height: 38px;
   background-color: #4caf50;
   cursor: pointer;
   &:disabled {
@@ -27,7 +29,9 @@ export const HighlightedButton = styled.button`
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin-right: 1rem;
+  margin-right: 10px;
+  margin-top: 18px;
+  height: 38px;
   background-color: darkblue;
   cursor: pointer;
   &:disabled {

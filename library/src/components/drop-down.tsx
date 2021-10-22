@@ -22,9 +22,12 @@ export const DropDown: React.FC<Props> = (props: Props) => {
         ...provided,
         fontFamily: `-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen", "Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue", sans-serif;`,
         color: "white",
-        borderColor: "#2d3748",
+        border: "1px solid transparent",
+        borderRadius: "1px",
+        outline: "none",
+        boxShadow: "0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15)",
         width: props.width,
-        outline: "#2d3748",
+        //        outline: "#2d3748",
       };
     },
     singleValue: (provided) => {

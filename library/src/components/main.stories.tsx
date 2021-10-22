@@ -7,5 +7,5 @@ export default {
 } as Meta;
 
 export const Primary: React.VFC<{}> = () => (
-  <Main>Main content goes here including title and menu</Main>
+  <Main>Wrap everything in main</Main>
 );
