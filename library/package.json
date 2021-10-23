@@ -1,6 +1,6 @@
 {
   "name": "atos-react-jsx",
-  "version": "1.0.16",
+  "version": "1.0.18",
   "description": "open source react components for creating Atos apps",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

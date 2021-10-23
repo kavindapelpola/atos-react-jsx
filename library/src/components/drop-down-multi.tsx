@@ -41,7 +41,7 @@ export const DropDownMulti: React.FC<Props> = (props: Props) => {
       return {
         ...provided,
         color: '#2d3748',
-        fontSize: '14px',
+        fontSize: '12px',
         backgroundColor: isSelected
           ? '#B8C4D8'
           : isFocused

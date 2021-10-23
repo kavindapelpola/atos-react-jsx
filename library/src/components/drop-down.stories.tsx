@@ -28,6 +28,25 @@ export const Primary: React.VFC<{}> = () => {
   );
 };
 
+export const PrimaryInfo: React.VFC<{}> = () => {
+  const [val, setVal] = React.useState<string>();
+  return (
+    <Main>
+      <Row>
+        <DropDown
+          name="example"
+          title="example"
+          options={['Option1', 'Option2']}
+          value={val}
+          setValue={setVal}
+          width={200}
+          info={() => {}}
+        />
+      </Row>
+    </Main>
+  );
+};
+
 export const Wide: React.VFC<{}> = () => {
   const [val, setVal] = React.useState<string>();
   return (
