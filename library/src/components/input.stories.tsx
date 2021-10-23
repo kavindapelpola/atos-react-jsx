@@ -1,13 +1,13 @@
-import { Meta } from "@storybook/react";
-import React from "react";
-import { Input } from "./input";
-import { Main } from "./main";
-import { Row } from "./row";
-import { InputArea } from "./input-area";
+import { Meta } from '@storybook/react';
+import React from 'react';
+import { Input } from './input';
+import { Main } from './main';
+import { Row } from './row';
+import { InputArea } from './input-area';
 
 export default {
   component: Input,
-  title: "Components/Inputs",
+  title: 'Components/Inputs',
 } as Meta;
 
 export const PrimaryInput: React.VFC<{}> = () => {
@@ -21,6 +21,24 @@ export const PrimaryInput: React.VFC<{}> = () => {
           value={val}
           setValue={setVal}
           width={200}
+        />
+      </Row>
+    </Main>
+  );
+};
+
+export const PrimaryInputError: React.VFC<{}> = () => {
+  const [val, setVal] = React.useState<string>();
+  return (
+    <Main>
+      <Row>
+        <Input
+          name="example"
+          title="example"
+          value={val}
+          setValue={setVal}
+          width={200}
+          error="some error"
         />
       </Row>
     </Main>
@@ -44,6 +62,43 @@ export const PrimaryInputWide: React.VFC<{}> = () => {
   );
 };
 
+export const PrimaryInputInfo: React.VFC<{}> = () => {
+  const [val, setVal] = React.useState<string>();
+  return (
+    <Main>
+      <Row>
+        <Input
+          name="info-example"
+          title="Info example"
+          value={val}
+          setValue={setVal}
+          width={200}
+          info={() => {}}
+        />
+      </Row>
+    </Main>
+  );
+};
+
+export const PrimaryInputInfoError: React.VFC<{}> = () => {
+  const [val, setVal] = React.useState<string>();
+  return (
+    <Main>
+      <Row>
+        <Input
+          name="info-example"
+          title="Info example"
+          value={val}
+          setValue={setVal}
+          width={200}
+          error="some error"
+          info={() => {}}
+        />
+      </Row>
+    </Main>
+  );
+};
+
 export const AreaInput: React.VFC<{}> = () => {
   const [val, setVal] = React.useState<string>();
   return (
@@ -56,6 +111,45 @@ export const AreaInput: React.VFC<{}> = () => {
           setValue={setVal}
           width={200}
           rows={3}
+        />
+      </Row>
+    </Main>
+  );
+};
+
+export const AreaInputInfo: React.VFC<{}> = () => {
+  const [val, setVal] = React.useState<string>();
+  return (
+    <Main>
+      <Row>
+        <InputArea
+          name="example"
+          title="example"
+          value={val}
+          setValue={setVal}
+          width={200}
+          rows={3}
+          info={() => {}}
+        />
+      </Row>
+    </Main>
+  );
+};
+
+export const AreaInputInfoError: React.VFC<{}> = () => {
+  const [val, setVal] = React.useState<string>();
+  return (
+    <Main>
+      <Row>
+        <InputArea
+          name="example"
+          title="example"
+          value={val}
+          setValue={setVal}
+          width={200}
+          rows={3}
+          info={() => {}}
+          error="some error"
         />
       </Row>
     </Main>

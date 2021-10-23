@@ -6,18 +6,18 @@ type Props = {
   name: string;
   title: string;
   options: string[];
-  value: string | undefined;
-  setValue: React.Dispatch<React.SetStateAction<string | undefined>>;
+  value: string[] | undefined;
+  setValue: React.Dispatch<React.SetStateAction<string[] | undefined>>;
   width: number;
   error?: string;
   loading?: boolean;
   disabled?: boolean;
 };
 
-export const DropDown: React.FC<Props> = (props: Props) => {
+export const DropDownMulti: React.FC<Props> = (props: Props) => {
   const selectStyle: StylesConfig<
     { label: string | undefined; value: string | undefined },
-    false
+    true
   > = {
     control: (provided) => {
       return {
@@ -57,8 +57,13 @@ export const DropDown: React.FC<Props> = (props: Props) => {
       {props.error && <LabelError>{props.title}:</LabelError>}
       <Select
         styles={selectStyle}
-        value={{ label: props.value, value: props.value }}
-        onChange={(n) => props.setValue(n?.value)}
+        isMulti
+        value={props.value?.map((v) => ({ label: v, value: v }))}
+        onChange={(n) => {
+          const newVal: string[] = [];
+          n.forEach((v) => v.value && newVal.push(v.value));
+          props.setValue(newVal);
+        }}
         options={props.options.map((o) => ({ label: o, value: o }))}
         isClearable={true}
         isLoading={props.loading}

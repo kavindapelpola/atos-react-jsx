@@ -7,6 +7,7 @@ declare type Props = {
     width: number;
     rows: number;
     error?: string;
+    info?: () => void;
 };
 export declare const InputArea: React.FC<Props>;
 export {};

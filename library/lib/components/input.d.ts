@@ -6,6 +6,7 @@ declare type Props = {
     setValue: React.Dispatch<React.SetStateAction<string | undefined>>;
     width: number;
     error?: string;
+    info?: () => void;
 };
 export declare const Input: React.FC<Props>;
 export {};
