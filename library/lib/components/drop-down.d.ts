@@ -9,6 +9,7 @@ declare type Props = {
     error?: string;
     loading?: boolean;
     disabled?: boolean;
+    info?: () => void;
 };
 export declare const DropDown: React.FC<Props>;
 export {};

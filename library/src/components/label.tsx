@@ -4,12 +4,14 @@ export const Label = styled.span`
   display: flex;
   justify-content: space-between;
   font-weight: bold;
+  font-size: 12px;
 `;
 
 export const LabelError = styled.span`
   display: flex;
   justify-content: space-between;
   font-weight: bold;
+  font-size: 12px;
   color: red;
 `;
 

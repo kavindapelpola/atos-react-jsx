@@ -1,6 +1,7 @@
-import { Label, LabelError, LabelMessage } from './label';
+import { Label, LabelError, LabelMessage, StyledInfo } from './label';
 import { LabeledInput } from './labeled-input';
 import Select, { StylesConfig } from 'react-select';
+import { HiOutlineInformationCircle } from 'react-icons/hi';
 
 type Props = {
   name: string;
@@ -12,6 +13,7 @@ type Props = {
   error?: string;
   loading?: boolean;
   disabled?: boolean;
+  info?: () => void;
 };
 
 export const DropDown: React.FC<Props> = (props: Props) => {
@@ -35,14 +37,14 @@ export const DropDown: React.FC<Props> = (props: Props) => {
       return {
         ...provided,
         color: '#2d3748',
-        fontSize: '14px',
+        fontSize: '12px',
       };
     },
     option: (provided, { isSelected, isFocused }) => {
       return {
         ...provided,
         color: '#2d3748',
-        fontSize: '14px',
+        fontSize: '12px',
         backgroundColor: isSelected
           ? '#B8C4D8'
           : isFocused
@@ -52,10 +54,32 @@ export const DropDown: React.FC<Props> = (props: Props) => {
     },
   };
 
+  const icon = (
+    <StyledInfo>
+      <HiOutlineInformationCircle
+        size={15}
+        style={{
+          cursor: 'pointer',
+        }}
+        onClick={() => {
+          props.info && props.info();
+        }}
+      />
+    </StyledInfo>
+  );
+
   return (
     <LabeledInput>
-      {props.title && !props.error && <Label>{props.title}:</Label>}
-      {props.title && props.error && <LabelError>{props.title}:</LabelError>}
+      {props.title && !props.error && (
+        <Label>
+          {props.title}:{props.info && icon}
+        </Label>
+      )}
+      {props.title && props.error && (
+        <LabelError>
+          {props.title}:{props.info && icon}
+        </LabelError>
+      )}
       <Select
         styles={selectStyle}
         value={{ label: props.value, value: props.value }}
