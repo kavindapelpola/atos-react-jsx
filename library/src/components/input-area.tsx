@@ -66,7 +66,7 @@ export const InputArea: React.FC<Props> = (props: Props) => {
         cols={props.width}
         onChange={(e) => props.setValue(e.target.value)}
       />
-      <LabelMessage>{props.error}</LabelMessage>
+      {props.title && <LabelMessage>{props.error}</LabelMessage>}
     </LabeledInput>
   );
 };

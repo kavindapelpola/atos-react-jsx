@@ -23,7 +23,7 @@ var DropDownMulti = function (props) {
     var _a;
     var selectStyle = {
         control: function (provided) {
-            return __assign(__assign({}, provided), { fontFamily: "-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Roboto\",\"Oxygen\", \"Ubuntu\",\"Cantarell\",\"Fira Sans\",\"Droid Sans\",\"Helvetica Neue\", sans-serif;", color: 'white', border: '1px solid transparent', borderRadius: '1px', outline: 'none', boxShadow: '0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15)', width: props.width });
+            return __assign(__assign({}, provided), { fontFamily: "-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Roboto\",\"Oxygen\", \"Ubuntu\",\"Cantarell\",\"Fira Sans\",\"Droid Sans\",\"Helvetica Neue\", sans-serif;", color: 'white', border: '1px solid transparent', borderRadius: '1px', outline: 'none', boxShadow: '0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15)', minWidth: props.width });
         },
         singleValue: function (provided) {
             return __assign(__assign({}, provided), { color: '#2d3748' });
@@ -41,6 +41,6 @@ var DropDownMulti = function (props) {
                     var newVal = [];
                     n.forEach(function (v) { return v.value && newVal.push(v.value); });
                     props.setValue(newVal);
-                }, options: props.options.map(function (o) { return ({ label: o, value: o }); }), isClearable: true, isLoading: props.loading, isDisabled: props.disabled }, void 0), (0, jsx_runtime_1.jsx)(label_1.LabelMessage, { children: props.error }, void 0)] }, void 0));
+                }, options: props.options.map(function (o) { return ({ label: o, value: o }); }), isClearable: true, isLoading: props.loading, isDisabled: props.disabled }, void 0), props.title && (0, jsx_runtime_1.jsx)(label_1.LabelMessage, { children: props.error }, void 0)] }, void 0));
 };
 exports.DropDownMulti = DropDownMulti;
