@@ -28,7 +28,7 @@ export const DropDownMulti: React.FC<Props> = (props: Props) => {
         borderRadius: '1px',
         outline: 'none',
         boxShadow: '0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15)',
-        width: props.width,
+        minWidth: props.width,
       };
     },
     singleValue: (provided) => {
@@ -69,7 +69,7 @@ export const DropDownMulti: React.FC<Props> = (props: Props) => {
         isLoading={props.loading}
         isDisabled={props.disabled}
       />
-      <LabelMessage>{props.error}</LabelMessage>
+      {props.title && <LabelMessage>{props.error}</LabelMessage>}
     </LabeledInput>
   );
 };

@@ -60,13 +60,12 @@ export const Input: React.FC<Props> = (props: Props) => {
           {props.title}:{props.info && icon}
         </LabelError>
       )}
-
       <StyledInput
         value={props.value}
         width={props.width}
         onChange={(e) => props.setValue(e.target.value)}
       />
-      <LabelMessage>{props.error}</LabelMessage>
+      {props.title && <LabelMessage>{props.error}</LabelMessage>}
     </LabeledInput>
   );
 };
