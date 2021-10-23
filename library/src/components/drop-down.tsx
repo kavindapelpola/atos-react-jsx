@@ -4,7 +4,7 @@ import Select, { StylesConfig } from 'react-select';
 
 type Props = {
   name: string;
-  title: string;
+  title?: string;
   options: string[];
   value: string | undefined;
   setValue: React.Dispatch<React.SetStateAction<string | undefined>>;
@@ -35,6 +35,7 @@ export const DropDown: React.FC<Props> = (props: Props) => {
       return {
         ...provided,
         color: '#2d3748',
+        fontSize: '14px',
       };
     },
     option: (provided, { isSelected, isFocused }) => {
@@ -53,8 +54,8 @@ export const DropDown: React.FC<Props> = (props: Props) => {
 
   return (
     <LabeledInput>
-      {!props.error && <Label>{props.title}:</Label>}
-      {props.error && <LabelError>{props.title}:</LabelError>}
+      {props.title && !props.error && <Label>{props.title}:</Label>}
+      {props.title && props.error && <LabelError>{props.title}:</LabelError>}
       <Select
         styles={selectStyle}
         value={{ label: props.value, value: props.value }}

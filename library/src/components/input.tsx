@@ -25,7 +25,7 @@ const StyledInput = styled.input`
 
 type Props = {
   name: string;
-  title: string;
+  title?: string;
   value: string | undefined;
   setValue: React.Dispatch<React.SetStateAction<string | undefined>>;
   width: number;
@@ -50,12 +50,12 @@ export const Input: React.FC<Props> = (props: Props) => {
 
   return (
     <LabeledInput>
-      {!props.error && (
+      {props.title && !props.error && (
         <Label>
           {props.title}:{props.info && icon}
         </Label>
       )}
-      {props.error && (
+      {props.title && props.error && (
         <LabelError>
           {props.title}:{props.info && icon}
         </LabelError>

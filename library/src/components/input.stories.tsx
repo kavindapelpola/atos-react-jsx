@@ -27,6 +27,17 @@ export const PrimaryInput: React.VFC<{}> = () => {
   );
 };
 
+export const NoTitle: React.VFC<{}> = () => {
+  const [val, setVal] = React.useState<string>();
+  return (
+    <Main>
+      <Row>
+        <Input name="example" value={val} setValue={setVal} width={200} />
+      </Row>
+    </Main>
+  );
+};
+
 export const PrimaryInputError: React.VFC<{}> = () => {
   const [val, setVal] = React.useState<string>();
   return (
@@ -107,6 +118,23 @@ export const AreaInput: React.VFC<{}> = () => {
         <InputArea
           name="example"
           title="example"
+          value={val}
+          setValue={setVal}
+          width={200}
+          rows={3}
+        />
+      </Row>
+    </Main>
+  );
+};
+
+export const AreaNoTitle: React.VFC<{}> = () => {
+  const [val, setVal] = React.useState<string>();
+  return (
+    <Main>
+      <Row>
+        <InputArea
+          name="example"
           value={val}
           setValue={setVal}
           width={200}

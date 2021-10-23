@@ -110,3 +110,20 @@ export const Multi: React.VFC<{}> = () => {
     </Main>
   );
 };
+
+export const MultiNoTitle: React.VFC<{}> = () => {
+  const [val, setVal] = React.useState<string[]>();
+  return (
+    <Main>
+      <Row>
+        <DropDownMulti
+          name="multi-example"
+          options={['multi 1', 'multi 2', 'multi 3', 'multi 4', 'multi 5']}
+          value={val}
+          setValue={setVal}
+          width={400}
+        />
+      </Row>
+    </Main>
+  );
+};

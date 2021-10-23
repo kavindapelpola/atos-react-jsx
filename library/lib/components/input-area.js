@@ -20,7 +20,7 @@ var InputArea = function (props) {
             }, onClick: function () {
                 props.info && props.info();
             } }, void 0) }, void 0));
-    return ((0, jsx_runtime_1.jsxs)(labeled_input_1.LabeledInput, { children: [!props.error && ((0, jsx_runtime_1.jsxs)(label_1.Label, { children: [props.title, ":", props.info && icon] }, void 0)), props.error && ((0, jsx_runtime_1.jsxs)(label_1.LabelError, { children: [props.title, ":", props.info && icon] }, void 0)), (0, jsx_runtime_1.jsx)(StyledInput, { value: props.value, rows: props.rows, cols: props.width, onChange: function (e) { return props.setValue(e.target.value); } }, void 0), (0, jsx_runtime_1.jsx)(label_1.LabelMessage, { children: props.error }, void 0)] }, void 0));
+    return ((0, jsx_runtime_1.jsxs)(labeled_input_1.LabeledInput, { children: [props.title && !props.error && ((0, jsx_runtime_1.jsxs)(label_1.Label, { children: [props.title, ":", props.info && icon] }, void 0)), props.title && props.error && ((0, jsx_runtime_1.jsxs)(label_1.LabelError, { children: [props.title, ":", props.info && icon] }, void 0)), (0, jsx_runtime_1.jsx)(StyledInput, { value: props.value, rows: props.rows, cols: props.width, onChange: function (e) { return props.setValue(e.target.value); } }, void 0), (0, jsx_runtime_1.jsx)(label_1.LabelMessage, { children: props.error }, void 0)] }, void 0));
 };
 exports.InputArea = InputArea;
 var templateObject_1;
