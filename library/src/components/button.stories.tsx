@@ -1,11 +1,11 @@
-import { Meta } from "@storybook/react";
-import { Button, HighlightedButton } from "./button";
-import { Main } from "./main";
-import { Row } from "./row";
+import { Meta } from '@storybook/react';
+import { Button } from './button';
+import { Main } from './main';
+import { Row } from './row';
 
 export default {
   component: Button,
-  title: "Components/Button",
+  title: 'Components/Button',
 } as Meta;
 
 export const Primary: React.VFC<{}> = () => (
@@ -19,7 +19,7 @@ export const Primary: React.VFC<{}> = () => (
 export const Highlighted: React.VFC<{}> = () => (
   <Main>
     <Row>
-      <HighlightedButton>Highlighted</HighlightedButton>
+      <Button primary>Highlighted</Button>
     </Row>
   </Main>
 );

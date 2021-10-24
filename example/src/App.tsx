@@ -18,9 +18,17 @@ function App() {
   const [select, setSelect] = React.useState<string>();
   const [select2, setSelect2] = React.useState<string>();
   const [select2Error, setSelect2Error] = React.useState<string>();
+  const [lang, setLang] = React.useState<string>("en");
   return (
     <Main>
-      <Title title="Example" user="user" prodUrl="http://prod" />
+      <Title
+        title="Example"
+        user="user"
+        prodUrl="http://prod"
+        lang={lang}
+        setLang={setLang}
+        langs={["en", "de", "fr"]}
+      />
       <Menu>
         <MenuItem title="Item1" path="/test1" />
         <MenuItem title="Item2" path="/test2" />
@@ -65,7 +73,7 @@ function App() {
           width={300}
           rows={4}
           value={inputArea}
-          setValue={setInputArea}
+          onChange={setInputArea}
         />
       </Row>
     </Main>

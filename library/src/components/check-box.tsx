@@ -1,7 +1,7 @@
-import { Label, LabelError, LabelMessage } from "./label";
-import { LabeledInput } from "./labeled-input";
-import { ImCheckboxChecked, ImCheckboxUnchecked } from "react-icons/im";
-import styled from "styled-components";
+import { Label, LabelError, LabelMessage } from './label';
+import { LabeledInput } from './labeled-input';
+import { ImCheckboxChecked, ImCheckboxUnchecked } from 'react-icons/im';
+import styled from 'styled-components';
 
 const StyledInput = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ type Props = {
   name: string;
   title: string;
   value: boolean | undefined;
-  setValue: React.Dispatch<React.SetStateAction<boolean | undefined>>;
+  onChange: React.Dispatch<React.SetStateAction<boolean | undefined>>;
   error?: string;
 };
 
@@ -26,13 +26,13 @@ export const CheckBox: React.FC<Props> = (props: Props) => {
       <StyledInput>
         {props.value && (
           <ImCheckboxChecked
-            onClick={() => props.setValue(false)}
+            onClick={() => props.onChange(false)}
             color="rgba(0, 0, 0, 0.50)"
           />
         )}
         {!props.value && (
           <ImCheckboxUnchecked
-            onClick={() => props.setValue(true)}
+            onClick={() => props.onChange(true)}
             color="rgba(0, 0, 0, 0.15)"
           />
         )}

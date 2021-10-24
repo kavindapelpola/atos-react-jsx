@@ -40,7 +40,7 @@ var DropDownMulti = function (props) {
     return ((0, jsx_runtime_1.jsxs)(labeled_input_1.LabeledInput, { children: [props.title && !props.error && (0, jsx_runtime_1.jsxs)(label_1.Label, { children: [props.title, ":"] }, void 0), props.title && props.error && (0, jsx_runtime_1.jsxs)(label_1.LabelError, { children: [props.title, ":"] }, void 0), (0, jsx_runtime_1.jsx)(react_select_1.default, { styles: selectStyle, isMulti: true, value: (_a = props.value) === null || _a === void 0 ? void 0 : _a.map(function (v) { return ({ label: v, value: v }); }), onChange: function (n) {
                     var newVal = [];
                     n.forEach(function (v) { return v.value && newVal.push(v.value); });
-                    props.setValue(newVal);
+                    props.onChange(newVal);
                 }, options: props.options.map(function (o) { return ({ label: o, value: o }); }), isClearable: true, isLoading: props.loading, isDisabled: props.disabled }, void 0), props.title && (0, jsx_runtime_1.jsx)(label_1.LabelMessage, { children: props.error }, void 0)] }, void 0));
 };
 exports.DropDownMulti = DropDownMulti;

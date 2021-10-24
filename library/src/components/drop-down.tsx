@@ -8,7 +8,7 @@ type Props = {
   title?: string;
   options: string[];
   value: string | undefined;
-  setValue: React.Dispatch<React.SetStateAction<string | undefined>>;
+  onChange: React.Dispatch<React.SetStateAction<string | undefined>>;
   width: number;
   error?: string;
   loading?: boolean;
@@ -83,7 +83,7 @@ export const DropDown: React.FC<Props> = (props: Props) => {
       <Select
         styles={selectStyle}
         value={{ label: props.value, value: props.value }}
-        onChange={(n) => props.setValue(n?.value)}
+        onChange={(n) => props.onChange(n?.value)}
         options={props.options.map((o) => ({ label: o, value: o }))}
         isClearable={true}
         isLoading={props.loading}
