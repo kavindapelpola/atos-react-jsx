@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { useHistory } from "react-router-dom";
+import styled from 'styled-components';
+import { useHistory } from 'react-router-dom';
 
 const TitleBar = styled.header`
   display: flex;
@@ -67,7 +67,7 @@ type Props = {
   setLang?: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const host = window.location.protocol + "//" + window.location.hostname;
+const host = window.location.protocol + '//' + window.location.hostname;
 
 export const Title: React.FC<Props> = (props: Props) => {
   const history = useHistory();
@@ -78,7 +78,7 @@ export const Title: React.FC<Props> = (props: Props) => {
 
   return (
     <TitleBar aria-label="top-bar">
-      <HeaderLink onClick={() => handleClick("/")}>
+      <HeaderLink onClick={() => handleClick('/')}>
         <AtosLogo src="/atos-logo.png" />
         {host === props.prodUrl ? (
           <H1>{props.title}</H1>
@@ -95,6 +95,7 @@ export const Title: React.FC<Props> = (props: Props) => {
             return (
               <LangButton
                 name={lang}
+                key={'language-' + lang}
                 onClick={() => {
                   props.setLang && props.setLang(lang);
                 }}

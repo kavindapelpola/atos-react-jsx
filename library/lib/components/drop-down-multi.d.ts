@@ -4,7 +4,7 @@ declare type Props = {
     title?: string;
     options: string[];
     value: string[] | undefined;
-    setValue: React.Dispatch<React.SetStateAction<string[] | undefined>>;
+    onChange: React.Dispatch<React.SetStateAction<string[] | undefined>>;
     width: number;
     error?: string;
     loading?: boolean;

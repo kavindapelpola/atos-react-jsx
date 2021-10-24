@@ -16,7 +16,7 @@ const StyledInput = styled.input`
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   text-align: left;
   text-overflow: ellipsis;
   line-height: 26px;
@@ -27,7 +27,8 @@ type Props = {
   name: string;
   title?: string;
   value: string | undefined;
-  setValue: React.Dispatch<React.SetStateAction<string | undefined>>;
+  onChange: React.Dispatch<React.SetStateAction<string | undefined>>;
+  onBlur?: () => void;
   width: number;
   error?: string;
   info?: () => void;
@@ -63,7 +64,8 @@ export const Input: React.FC<Props> = (props: Props) => {
       <StyledInput
         value={props.value}
         width={props.width}
-        onChange={(e) => props.setValue(e.target.value)}
+        onChange={(e) => props.onChange(e.target.value)}
+        onBlur={() => props.onBlur && props.onBlur()}
       />
       {props.title && <LabelMessage>{props.error}</LabelMessage>}
     </LabeledInput>

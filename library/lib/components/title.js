@@ -30,19 +30,19 @@ var HeaderLink = styled_components_1.default.div(templateObject_5 || (templateOb
 var H1 = styled_components_1.default.h1(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  font-size: 1.2rem;\n  font-weight: 200;\n  margin: 0;\n  text-transform: uppercase;\n"], ["\n  font-size: 1.2rem;\n  font-weight: 200;\n  margin: 0;\n  text-transform: uppercase;\n"])));
 var H1Test = styled_components_1.default.h1(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  font-size: 1.2rem;\n  font-weight: 400;\n  margin: 0;\n  text-transform: uppercase;\n  color: red;\n"], ["\n  font-size: 1.2rem;\n  font-weight: 400;\n  margin: 0;\n  text-transform: uppercase;\n  color: red;\n"])));
 var UserName = styled_components_1.default.div(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n  display: flex;\n  align-items: right;\n  margin-right: 1rem;\n  color: white;\n"], ["\n  display: flex;\n  align-items: right;\n  margin-right: 1rem;\n  color: white;\n"])));
-var host = window.location.protocol + "//" + window.location.hostname;
+var host = window.location.protocol + '//' + window.location.hostname;
 var Title = function (props) {
     var history = (0, react_router_dom_1.useHistory)();
     var handleClick = function (path) {
         history.push(path);
     };
-    return ((0, jsx_runtime_1.jsxs)(TitleBar, __assign({ "aria-label": "top-bar" }, { children: [(0, jsx_runtime_1.jsxs)(HeaderLink, __assign({ onClick: function () { return handleClick("/"); } }, { children: [(0, jsx_runtime_1.jsx)(AtosLogo, { src: "/atos-logo.png" }, void 0), host === props.prodUrl ? ((0, jsx_runtime_1.jsx)(H1, { children: props.title }, void 0)) : ((0, jsx_runtime_1.jsxs)(H1Test, { children: [props.title, " - NON-PROD"] }, void 0))] }), void 0), (0, jsx_runtime_1.jsxs)(LangButtons, { children: [(0, jsx_runtime_1.jsx)(UserName, { children: props.user }, void 0), props.lang &&
+    return ((0, jsx_runtime_1.jsxs)(TitleBar, __assign({ "aria-label": "top-bar" }, { children: [(0, jsx_runtime_1.jsxs)(HeaderLink, __assign({ onClick: function () { return handleClick('/'); } }, { children: [(0, jsx_runtime_1.jsx)(AtosLogo, { src: "/atos-logo.png" }, void 0), host === props.prodUrl ? ((0, jsx_runtime_1.jsx)(H1, { children: props.title }, void 0)) : ((0, jsx_runtime_1.jsxs)(H1Test, { children: [props.title, " - NON-PROD"] }, void 0))] }), void 0), (0, jsx_runtime_1.jsxs)(LangButtons, { children: [(0, jsx_runtime_1.jsx)(UserName, { children: props.user }, void 0), props.lang &&
                         props.langs &&
                         props.setLang &&
                         props.langs.map(function (lang) {
                             return ((0, jsx_runtime_1.jsx)(LangButton, __assign({ name: lang, onClick: function () {
                                     props.setLang && props.setLang(lang);
-                                } }, { children: props.lang === lang ? ((0, jsx_runtime_1.jsx)("span", { children: (0, jsx_runtime_1.jsx)("strong", { children: (0, jsx_runtime_1.jsx)("em", { children: lang.toUpperCase() }, void 0) }, void 0) }, void 0)) : ((0, jsx_runtime_1.jsx)("span", { children: lang.toUpperCase() }, void 0)) }), void 0));
+                                } }, { children: props.lang === lang ? ((0, jsx_runtime_1.jsx)("span", { children: (0, jsx_runtime_1.jsx)("strong", { children: (0, jsx_runtime_1.jsx)("em", { children: lang.toUpperCase() }, void 0) }, void 0) }, void 0)) : ((0, jsx_runtime_1.jsx)("span", { children: lang.toUpperCase() }, void 0)) }), 'language-' + lang));
                         })] }, void 0)] }), void 0));
 };
 exports.Title = Title;

@@ -7,7 +7,7 @@ type Props = {
   title?: string;
   options: string[];
   value: string[] | undefined;
-  setValue: React.Dispatch<React.SetStateAction<string[] | undefined>>;
+  onChange: React.Dispatch<React.SetStateAction<string[] | undefined>>;
   width: number;
   error?: string;
   loading?: boolean;
@@ -62,7 +62,7 @@ export const DropDownMulti: React.FC<Props> = (props: Props) => {
         onChange={(n) => {
           const newVal: string[] = [];
           n.forEach((v) => v.value && newVal.push(v.value));
-          props.setValue(newVal);
+          props.onChange(newVal);
         }}
         options={props.options.map((o) => ({ label: o, value: o }))}
         isClearable={true}

@@ -17,6 +17,7 @@ export const LabelError = styled.span`
 
 export const LabelMessage = styled.span`
   display: inline-block;
+  font-size: 12px;
   color: red;
 `;
 

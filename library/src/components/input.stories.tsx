@@ -19,7 +19,7 @@ export const PrimaryInput: React.VFC<{}> = () => {
           name="example"
           title="example"
           value={val}
-          setValue={setVal}
+          onChange={setVal}
           width={200}
         />
       </Row>
@@ -32,7 +32,7 @@ export const NoTitle: React.VFC<{}> = () => {
   return (
     <Main>
       <Row>
-        <Input name="example" value={val} setValue={setVal} width={200} />
+        <Input name="example" value={val} onChange={setVal} width={200} />
       </Row>
     </Main>
   );
@@ -47,7 +47,7 @@ export const PrimaryInputError: React.VFC<{}> = () => {
           name="example"
           title="example"
           value={val}
-          setValue={setVal}
+          onChange={setVal}
           width={200}
           error="some error"
         />
@@ -65,7 +65,7 @@ export const PrimaryInputWide: React.VFC<{}> = () => {
           name="wide-example"
           title="Wide example"
           value={val}
-          setValue={setVal}
+          onChange={setVal}
           width={400}
         />
       </Row>
@@ -82,7 +82,7 @@ export const PrimaryInputInfo: React.VFC<{}> = () => {
           name="info-example"
           title="Info example"
           value={val}
-          setValue={setVal}
+          onChange={setVal}
           width={200}
           info={() => {}}
         />
@@ -100,7 +100,7 @@ export const PrimaryInputInfoError: React.VFC<{}> = () => {
           name="info-example"
           title="Info example"
           value={val}
-          setValue={setVal}
+          onChange={setVal}
           width={200}
           error="some error"
           info={() => {}}
@@ -119,7 +119,7 @@ export const AreaInput: React.VFC<{}> = () => {
           name="example"
           title="example"
           value={val}
-          setValue={setVal}
+          onChange={setVal}
           width={200}
           rows={3}
         />
@@ -136,7 +136,7 @@ export const AreaNoTitle: React.VFC<{}> = () => {
         <InputArea
           name="example"
           value={val}
-          setValue={setVal}
+          onChange={setVal}
           width={200}
           rows={3}
         />
@@ -154,7 +154,7 @@ export const AreaInputInfo: React.VFC<{}> = () => {
           name="example"
           title="example"
           value={val}
-          setValue={setVal}
+          onChange={setVal}
           width={200}
           rows={3}
           info={() => {}}
@@ -173,11 +173,35 @@ export const AreaInputInfoError: React.VFC<{}> = () => {
           name="example"
           title="example"
           value={val}
-          setValue={setVal}
+          onChange={setVal}
           width={200}
           rows={3}
           info={() => {}}
           error="some error"
+        />
+      </Row>
+    </Main>
+  );
+};
+
+export const AreaInputOnBlur: React.VFC<{}> = () => {
+  const [val, setVal] = React.useState<string>();
+  const [error, setError] = React.useState<string>();
+  return (
+    <Main>
+      <Row>
+        <InputArea
+          name="example"
+          title="example"
+          value={val}
+          onChange={setVal}
+          onBlur={() => {
+            setError('validation error');
+          }}
+          width={200}
+          rows={3}
+          info={() => {}}
+          error={error}
         />
       </Row>
     </Main>
