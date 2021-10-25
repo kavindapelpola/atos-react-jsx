@@ -27,6 +27,24 @@ export const PrimaryInput: React.VFC<{}> = () => {
   );
 };
 
+export const Disabled: React.VFC<{}> = () => {
+  const [val, setVal] = React.useState<string>();
+  return (
+    <Main>
+      <Row>
+        <Input
+          name="example"
+          title="example"
+          value={val}
+          onChange={setVal}
+          width={200}
+          disabled
+        />
+      </Row>
+    </Main>
+  );
+};
+
 export const NoTitle: React.VFC<{}> = () => {
   const [val, setVal] = React.useState<string>();
   return (
@@ -122,6 +140,25 @@ export const AreaInput: React.VFC<{}> = () => {
           onChange={setVal}
           width={200}
           rows={3}
+        />
+      </Row>
+    </Main>
+  );
+};
+
+export const AreaDisabled: React.VFC<{}> = () => {
+  const [val, setVal] = React.useState<string>();
+  return (
+    <Main>
+      <Row>
+        <InputArea
+          name="example"
+          title="example"
+          value={val}
+          onChange={setVal}
+          width={200}
+          rows={3}
+          disabled
         />
       </Row>
     </Main>

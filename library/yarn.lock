@@ -3007,6 +3007,16 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
+atos-react-jsx@1.0.21:
+  version "1.0.21"
+  resolved "https://registry.yarnpkg.com/atos-react-jsx/-/atos-react-jsx-1.0.21.tgz#3acdb64c4a101f0da4fef098759e2c3ccaa749ec"
+  integrity sha512-ECaI5eHdvl3iL0HjFawztiA/53TLdHuoTdaKNT5gn7MBHVUy6U8QtUEcIYXhXfEYPdP61e7cHRXQGopWkypwgA==
+  dependencies:
+    react-icons "^4.3.1"
+    react-select "^5.1.0"
+    react-spinners "^0.11.0"
+    styled-components "^5.3.1"
+
 autoprefixer@^9.8.6:
   version "9.8.8"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.8.8.tgz#fd4bd4595385fa6f06599de749a4d5f7a474957a"
