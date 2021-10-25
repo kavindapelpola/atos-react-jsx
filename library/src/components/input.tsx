@@ -21,6 +21,10 @@ const StyledInput = styled.input`
   text-overflow: ellipsis;
   line-height: 26px;
   -webkit-appearance: none;
+  &:disabled {
+    background: hsl(0, 0%, 95%);
+    cursor: default;
+  }
 `;
 
 type Props = {
@@ -32,6 +36,7 @@ type Props = {
   width: number;
   error?: string;
   info?: () => void;
+  disabled?: boolean;
 };
 
 export const Input: React.FC<Props> = (props: Props) => {
@@ -66,6 +71,7 @@ export const Input: React.FC<Props> = (props: Props) => {
         width={props.width}
         onChange={(e) => props.onChange(e.target.value)}
         onBlur={() => props.onBlur && props.onBlur()}
+        disabled={props.disabled}
       />
       {props.title && <LabelMessage>{props.error}</LabelMessage>}
     </LabeledInput>

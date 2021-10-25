@@ -8,6 +8,7 @@ declare type Props = {
     width: number;
     error?: string;
     info?: () => void;
+    disabled?: boolean;
 };
 export declare const Input: React.FC<Props>;
 export {};

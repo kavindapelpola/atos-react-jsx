@@ -20,6 +20,10 @@ const StyledInput = styled.textarea`
   text-overflow: ellipsis;
   line-height: 26px;
   -webkit-appearance: none;
+  &:disabled {
+    background: hsl(0, 0%, 95%);
+    cursor: default;
+  }
 `;
 
 type Props = {
@@ -32,6 +36,7 @@ type Props = {
   rows: number;
   error?: string;
   info?: () => void;
+  disabled?: boolean;
 };
 
 export const InputArea: React.FC<Props> = (props: Props) => {
@@ -67,6 +72,7 @@ export const InputArea: React.FC<Props> = (props: Props) => {
         cols={props.width}
         onChange={(e) => props.onChange(e.target.value)}
         onBlur={() => props.onBlur && props.onBlur()}
+        disabled={props.disabled}
       />
       {props.title && <LabelMessage>{props.error}</LabelMessage>}
     </LabeledInput>

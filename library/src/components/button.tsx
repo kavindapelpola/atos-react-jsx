@@ -10,7 +10,7 @@ export const Button = styled('button')<{ primary?: boolean }>`
   display: inline-block;
   font-size: 14px;
   margin-right: 10px;
-  margin-top: 18px;
+  margin-top: 5px;
   height: 30px;
   background-color: ${(props) => (props.primary ? 'darkblue' : '#4caf50')};
   cursor: pointer;
