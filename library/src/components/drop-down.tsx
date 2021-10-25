@@ -9,6 +9,7 @@ type Props = {
   options: string[];
   value: string | undefined;
   onChange: React.Dispatch<React.SetStateAction<string | undefined>>;
+  onBlur?: () => void;
   width: number;
   error?: string;
   loading?: boolean;
@@ -88,6 +89,7 @@ export const DropDown: React.FC<Props> = (props: Props) => {
         isClearable={true}
         isLoading={props.loading}
         isDisabled={props.disabled}
+        onBlur={() => props.onBlur && props.onBlur()}
       />
       {props.title && <LabelMessage>{props.error}</LabelMessage>}
     </LabeledInput>
