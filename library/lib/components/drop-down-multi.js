@@ -41,6 +41,6 @@ var DropDownMulti = function (props) {
                     var newVal = [];
                     n.forEach(function (v) { return v.value && newVal.push(v.value); });
                     props.onChange(newVal);
-                }, options: props.options.map(function (o) { return ({ label: o, value: o }); }), isClearable: true, isLoading: props.loading, isDisabled: props.disabled }, void 0), props.title && (0, jsx_runtime_1.jsx)(label_1.LabelMessage, { children: props.error }, void 0)] }, void 0));
+                }, options: props.options.map(function (o) { return ({ label: o, value: o }); }), isClearable: true, isLoading: props.loading, isDisabled: props.disabled, onBlur: function () { return props.onBlur && props.onBlur(); } }, void 0), props.title && (0, jsx_runtime_1.jsx)(label_1.LabelMessage, { children: props.error }, void 0)] }, void 0));
 };
 exports.DropDownMulti = DropDownMulti;

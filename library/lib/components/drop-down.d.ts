@@ -5,6 +5,7 @@ declare type Props = {
     options: string[];
     value: string | undefined;
     onChange: React.Dispatch<React.SetStateAction<string | undefined>>;
+    onBlur?: () => void;
     width: number;
     error?: string;
     loading?: boolean;
