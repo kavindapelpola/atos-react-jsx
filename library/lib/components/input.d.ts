@@ -9,6 +9,8 @@ declare type Props = {
     error?: string;
     info?: () => void;
     disabled?: boolean;
+    testId?: string;
+    hint?: string;
 };
 export declare const Input: React.FC<Props>;
 export {};

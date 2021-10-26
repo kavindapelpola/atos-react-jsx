@@ -37,6 +37,8 @@ type Props = {
   error?: string;
   info?: () => void;
   disabled?: boolean;
+  testId?: string;
+  hint?: string;
 };
 
 export const Input: React.FC<Props> = (props: Props) => {
@@ -72,6 +74,8 @@ export const Input: React.FC<Props> = (props: Props) => {
         onChange={(e) => props.onChange(e.target.value)}
         onBlur={() => props.onBlur && props.onBlur()}
         disabled={props.disabled}
+        data-testid={props.testId}
+        placeholder={props.hint}
       />
       {props.title && <LabelMessage>{props.error}</LabelMessage>}
     </LabeledInput>

@@ -20,8 +20,27 @@ export const Primary: React.VFC<{}> = () => {
           title="example"
           options={['Option1', 'Option2']}
           value={val}
-          setValue={setVal}
+          onChange={setVal}
           width={200}
+        />
+      </Row>
+    </Main>
+  );
+};
+
+export const Hint: React.VFC<{}> = () => {
+  const [val, setVal] = React.useState<string>();
+  return (
+    <Main>
+      <Row>
+        <DropDown
+          name="example"
+          title="example"
+          options={['Option1', 'Option2']}
+          value={val}
+          onChange={setVal}
+          width={200}
+          hint="hint..."
         />
       </Row>
     </Main>
@@ -38,7 +57,7 @@ export const PrimaryInfo: React.VFC<{}> = () => {
           title="example"
           options={['Option1', 'Option2']}
           value={val}
-          setValue={setVal}
+          onChange={setVal}
           width={200}
           info={() => {}}
         />
@@ -60,7 +79,7 @@ export const Wide: React.VFC<{}> = () => {
             'Wide option with lots of writing 2',
           ]}
           value={val}
-          setValue={setVal}
+          onChange={setVal}
           width={400}
         />
       </Row>
@@ -81,7 +100,7 @@ export const Loading: React.VFC<{}> = () => {
             'Wide option with lots of writing 2',
           ]}
           value={val}
-          setValue={setVal}
+          onChange={setVal}
           width={200}
           loading={true}
         />
@@ -103,7 +122,7 @@ export const Disabled: React.VFC<{}> = () => {
             'Wide option with lots of writing 2',
           ]}
           value={val}
-          setValue={setVal}
+          onChange={setVal}
           width={200}
           disabled={true}
         />
@@ -122,8 +141,27 @@ export const Multi: React.VFC<{}> = () => {
           title="multi-example"
           options={['multi 1', 'multi 2', 'multi 3', 'multi 4', 'multi 5']}
           value={val}
-          setValue={setVal}
+          onChange={setVal}
           width={400}
+        />
+      </Row>
+    </Main>
+  );
+};
+
+export const MultiHint: React.VFC<{}> = () => {
+  const [val, setVal] = React.useState<string[]>();
+  return (
+    <Main>
+      <Row>
+        <DropDownMulti
+          name="multi-example"
+          title="multi-example"
+          options={['multi 1', 'multi 2', 'multi 3', 'multi 4', 'multi 5']}
+          value={val}
+          onChange={setVal}
+          width={400}
+          hint="multi hint..."
         />
       </Row>
     </Main>
@@ -139,7 +177,7 @@ export const MultiNoTitle: React.VFC<{}> = () => {
           name="multi-example"
           options={['multi 1', 'multi 2', 'multi 3', 'multi 4', 'multi 5']}
           value={val}
-          setValue={setVal}
+          onChange={setVal}
           width={400}
         />
       </Row>

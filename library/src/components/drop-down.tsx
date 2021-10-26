@@ -15,6 +15,7 @@ type Props = {
   loading?: boolean;
   disabled?: boolean;
   info?: () => void;
+  hint?: string;
 };
 
 export const DropDown: React.FC<Props> = (props: Props) => {
@@ -53,6 +54,10 @@ export const DropDown: React.FC<Props> = (props: Props) => {
           : 'white',
       };
     },
+    placeholder: (provided) => ({
+      ...provided,
+      fontSize: '14px',
+    }),
   };
 
   const icon = (
@@ -83,13 +88,16 @@ export const DropDown: React.FC<Props> = (props: Props) => {
       )}
       <Select
         styles={selectStyle}
-        value={{ label: props.value, value: props.value }}
+        value={
+          props.value ? { label: props.value, value: props.value } : undefined
+        }
         onChange={(n) => props.onChange(n?.value)}
         options={props.options.map((o) => ({ label: o, value: o }))}
         isClearable={true}
         isLoading={props.loading}
         isDisabled={props.disabled}
         onBlur={() => props.onBlur && props.onBlur()}
+        placeholder={props.hint}
       />
       {props.title && <LabelMessage>{props.error}</LabelMessage>}
     </LabeledInput>

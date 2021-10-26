@@ -11,6 +11,7 @@ declare type Props = {
     loading?: boolean;
     disabled?: boolean;
     info?: () => void;
+    hint?: string;
 };
 export declare const DropDown: React.FC<Props>;
 export {};

@@ -10,6 +10,8 @@ declare type Props = {
     error?: string;
     info?: () => void;
     disabled?: boolean;
+    testId?: string;
+    hint?: string;
 };
 export declare const InputArea: React.FC<Props>;
 export {};

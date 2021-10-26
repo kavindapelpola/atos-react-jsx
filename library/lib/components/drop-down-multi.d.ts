@@ -10,6 +10,7 @@ declare type Props = {
     error?: string;
     loading?: boolean;
     disabled?: boolean;
+    hint?: string;
 };
 export declare const DropDownMulti: React.FC<Props>;
 export {};
