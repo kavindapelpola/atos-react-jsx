@@ -13,6 +13,7 @@ type Props = {
   error?: string;
   loading?: boolean;
   disabled?: boolean;
+  hint?: string;
 };
 
 export const DropDownMulti: React.FC<Props> = (props: Props) => {
@@ -50,6 +51,10 @@ export const DropDownMulti: React.FC<Props> = (props: Props) => {
           : 'white',
       };
     },
+    placeholder: (provided) => ({
+      ...provided,
+      fontSize: '14px',
+    }),
   };
 
   return (
@@ -70,6 +75,7 @@ export const DropDownMulti: React.FC<Props> = (props: Props) => {
         isLoading={props.loading}
         isDisabled={props.disabled}
         onBlur={() => props.onBlur && props.onBlur()}
+        placeholder={props.hint}
       />
       {props.title && <LabelMessage>{props.error}</LabelMessage>}
     </LabeledInput>

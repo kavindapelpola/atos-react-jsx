@@ -36,12 +36,13 @@ var DropDown = function (props) {
                         ? '#F2F7FF'
                         : 'white' });
         },
+        placeholder: function (provided) { return (__assign(__assign({}, provided), { fontSize: '14px' })); },
     };
     var icon = ((0, jsx_runtime_1.jsx)(label_1.StyledInfo, { children: (0, jsx_runtime_1.jsx)(hi_1.HiOutlineInformationCircle, { size: 15, style: {
                 cursor: 'pointer',
             }, onClick: function () {
                 props.info && props.info();
             } }, void 0) }, void 0));
-    return ((0, jsx_runtime_1.jsxs)(labeled_input_1.LabeledInput, { children: [props.title && !props.error && ((0, jsx_runtime_1.jsxs)(label_1.Label, { children: [props.title, ":", props.info && icon] }, void 0)), props.title && props.error && ((0, jsx_runtime_1.jsxs)(label_1.LabelError, { children: [props.title, ":", props.info && icon] }, void 0)), (0, jsx_runtime_1.jsx)(react_select_1.default, { styles: selectStyle, value: { label: props.value, value: props.value }, onChange: function (n) { return props.onChange(n === null || n === void 0 ? void 0 : n.value); }, options: props.options.map(function (o) { return ({ label: o, value: o }); }), isClearable: true, isLoading: props.loading, isDisabled: props.disabled, onBlur: function () { return props.onBlur && props.onBlur(); } }, void 0), props.title && (0, jsx_runtime_1.jsx)(label_1.LabelMessage, { children: props.error }, void 0)] }, void 0));
+    return ((0, jsx_runtime_1.jsxs)(labeled_input_1.LabeledInput, { children: [props.title && !props.error && ((0, jsx_runtime_1.jsxs)(label_1.Label, { children: [props.title, ":", props.info && icon] }, void 0)), props.title && props.error && ((0, jsx_runtime_1.jsxs)(label_1.LabelError, { children: [props.title, ":", props.info && icon] }, void 0)), (0, jsx_runtime_1.jsx)(react_select_1.default, { styles: selectStyle, value: props.value ? { label: props.value, value: props.value } : undefined, onChange: function (n) { return props.onChange(n === null || n === void 0 ? void 0 : n.value); }, options: props.options.map(function (o) { return ({ label: o, value: o }); }), isClearable: true, isLoading: props.loading, isDisabled: props.disabled, onBlur: function () { return props.onBlur && props.onBlur(); }, placeholder: props.hint }, void 0), props.title && (0, jsx_runtime_1.jsx)(label_1.LabelMessage, { children: props.error }, void 0)] }, void 0));
 };
 exports.DropDown = DropDown;
